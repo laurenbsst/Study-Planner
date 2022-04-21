@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+    <script src="./script.js" defer></script>
     <title>Study Planner - Sign up</title>
 </head>
 
@@ -32,18 +33,30 @@
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password">
 
-                    <label for="code">Input code</label>
+                    <label for="code">Code</label>
                     <input type="text" id="code" name="code">
                 </form>
-                <div class="registerButton">
-                    <p class="buttonText">Sign up</p>
-                </div>
+                <a href="./dashboard.html">
+                    <div class="registerButton">
+                        <p class="buttonText">Sign up</p>
+                    </div>
+                </a>
             </div>
         </div>
         <div class="testimonialContainer">
-            <p class="testimonial">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Vel turpis nunc eget lorem dolor sed viverra ipsum. Tortor pretium viverra
-                suspendisse potenti nullam ac tortor. Orci a scelerisque purus semper eget duis at tellus at." - Lorem ipsum, 20.</p>
+            <div class="slideshowContainer">
+                <div class="mySlides fade">
+                    <p>"The study planner really helped me to schedule my studies around the rest of my life - Alex, 21"
+                    </p>
+                </div>
+                <div class="mySlides fade">
+                    <p>"Being able to view the progress for each of my milestones has really motivated me to study
+                        more!" - Emma, 20</p>
+                </div>
+                <div class="mySlides fade">
+                    <p>"Using the study planner keeps me on track. My grades have improved as a result" - James, 19</p>
+                </div>
+            </div>
         </div>
     </div>
 </body>
