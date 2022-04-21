@@ -1,0 +1,73 @@
+body, html {
+    margin: 0;
+    background-image: linear-gradient(to bottom right, cornflowerblue, rgb(122, 162, 135))
+}
+
+.title {
+    margin-top: -1rem;
+    font-size: 1.5rem;
+    font-family: 'Jost', sans-serif;
+}
+
+.subtitle {
+    font-size: 1rem;
+    font-family: 'Nunito', sans-serif;
+}
+.background {
+    background-color: cornflowerblue;
+}
+
+.mainContainers {
+    height: 90vh;
+    width: 90%;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    align-self: center;
+    background-color: #fff;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+}
+.login-fields {
+    height: 80%;
+    width: 70%;
+    margin: auto;
+    padding-left: 3rem;
+    border-radius: 2.5%;
+    box-shadow: 0.3rem 0.3rem 1rem gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+.graphicContainer {
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+.graphicContainer > img {
+    height: 30rem;
+    width: 40rem;
+}
+
+form {
+    width: 80%;
+}
+form > label {
+    margin-bottom: 0.2rem;
+}
+form > input {
+    font-family: 'Nunito', sans-serif;
+    height: 2rem;
+    padding-left: 0.2rem;
+}
