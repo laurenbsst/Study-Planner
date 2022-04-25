@@ -1,73 +1,147 @@
-body, html {
-    margin: 0;
-    background-image: linear-gradient(to bottom right, cornflowerblue, rgb(122, 162, 135))
-}
-
-.title {
-    margin-top: -1rem;
-    font-size: 1.5rem;
-    font-family: 'Jost', sans-serif;
-}
-
-.subtitle {
-    font-size: 1rem;
-    font-family: 'Nunito', sans-serif;
-}
-.background {
-    background-color: cornflowerblue;
-}
-
-.mainContainers {
-    height: 90vh;
-    width: 90%;
-    margin: 2rem auto;
+.mainContainer {
     display: flex;
-    flex-direction: row;
-    justify-self: center;
-    align-self: center;
-    background-color: #fff;
-}
-
-.formContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 50%;
-    height: 100%;
-}
-.login-fields {
-    height: 80%;
-    width: 70%;
-    margin: auto;
-    padding-left: 3rem;
-    border-radius: 2.5%;
-    box-shadow: 0.3rem 0.3rem 1rem gray;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
-}
-.graphicContainer {
-    font-family: 'Nunito', sans-serif;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    height: 100vh;
 }
-.graphicContainer > img {
-    height: 30rem;
-    width: 40rem;
+
+.loginContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #EEEEEE;
+    border-radius: 5%;
+    height: 60vh;
+    width: 60vh;
+}
+
+.loginTitle {
+    font-size: 2rem;
+    font-family: 'Jost', sans-serif;
+    margin-bottom: 3rem;
 }
 
 form {
-    width: 80%;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
 }
-form > label {
-    margin-bottom: 0.2rem;
-}
-form > input {
+
+form>input {
+    padding-left: 0.3rem;
     font-family: 'Nunito', sans-serif;
     height: 2rem;
-    padding-left: 0.2rem;
+    margin-bottom: 1rem;
+}
+
+form>label {
+    font-size: 1rem;
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 0.3rem;
+}
+
+.loginBtn {
+    font-size: 1rem;
+    font-family: 'Jost', sans-serif;
+    text-align: center;
+    background-color: #00CC8E;
+    width: 40%;
+}
+
+.btnText {
+    color: white;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+.forgottenPText {
+    align-self: flex-end;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    margin-bottom: 3rem;
+}
+
+.footerText {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    margin-top: 3rem;
+}
+
+@media screen and (min-width: 320px) {
+
+    html,
+    body {
+        margin: 0;
+    }
+
+    a, a:visited {
+        text-decoration: none;
+    }
+
+    .mainContainer {
+        background-image: url(./assets/stacked-peaks-haikei.svg);
+        background-repeat: no-repeat;
+    }
+
+    .loginContainer {
+        height: 80vh;
+    }
+
+    .loginTitle {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    form {
+        width: 80%;
+    }
+
+    form>input {
+        font-family: 'Nunito', sans-serif;
+        height: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    form>label {
+        font-size: 1rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .loginBtn {
+        display: flex;
+        font-size: 1rem;
+        font-family: 'Jost', sans-serif;
+        justify-content: center;
+        align-items: center;
+        background-color: #00CC8E;
+        width: 80%;
+        height: 10%;
+    }
+
+    .forgottenPText {
+        align-self: flex-end;
+        font-family: 'Nunito', sans-serif;
+        font-weight: bold;
+        font-size: 0.8rem;
+        margin-top: -0.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .footerText {
+        font-family: 'Nunito', sans-serif;
+        font-size: 1rem;
+        margin-top: 2rem;
+    }
+
+    .signUpText {
+        font-family: 'Nunito', sans-serif;
+        font-weight: bold;
+        font-size: 0.8rem;
+        text-decoration: underline;
+    }
+
 }
