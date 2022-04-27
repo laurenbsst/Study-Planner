@@ -10,55 +10,61 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
-    <script src="./script.js" defer></script>
+    <script src="script.js" defer></script>
     <title>Study Planner - Sign up</title>
 </head>
 
 <body>
     <div class="mainContainer">
         <div class="contentContainer">
-            <div class="fields">
-                <h2 class="title">Welcome to the study planner.</h2>
-                <h3 class="subtitle">Enter your details below to create your own study profile.</h3>
+            <div class="signUpContainer">
+                <h2 class="signUpTitle">Sign up</h2>
                 <form>
-                    <label for="fname">First name</label>
-                    <input type="text" id="fname" name="fname">
-
-                    <label for="lname">Last name</label>
-                    <input type="text" id="lname" name="lname">
-
+                    <label for="firstName">First name</label>
+                    <input type="text" id="firstName" name="firstName" placeholder="Joe">
+                    <label for="lastName">Last name</label>
+                    <input type="text" id="lastName" name="lastName" placeholder="Bloggs">
                     <label for="email">Email address</label>
-                    <input type="email" id="email" name="email">
-
+                    <input type="email" id="email" name="email" placeholder="joebloggs123@gmail.com">
                     <label for="password">Password</label>
-                    <input type="password" id="password" name="password">
-
-                    <label for="code">Code</label>
-                    <input type="text" id="code" name="code">
+                    <input type="password" id="password" name="password" placeholder="Enter 7 characters or more">
+                    <label for="code">Referral code</label>
+                    <input type="text" id="code" name="code" placeholder="AXO17B">
                 </form>
-                <a href="./dashboard.html">
-                    <div class="button">
-                        <p class="buttonText">Sign up</p>
-                    </div>
-                </a>
+                <div class="signUpBtn">
+                    <a href="dashboard.html">
+                        <p class="btnText">Sign up</p>
+                    </a>
+                </div>
+                <div class="footer">
+                    <p class="footerText">Already have a study profile?</p>
+                    <p class="signInText"><a href="login.html">Sign in</a></p>
+                </div>
             </div>
-        </div>
-        <div class="testimonialContainer">
-            <div class="slideshowContainer">
-                <div class="mySlides fade">
-                    <p>"The study planner really helped me to schedule my studies around the rest of my life." - Alex, 21
-                    </p>
-                </div>
-                <div class="mySlides fade">
-                    <p>"Being able to view the progress for each of my milestones has really motivated me to study
-                        more!" - Emma, 20</p>
-                </div>
-                <div class="mySlides fade">
-                    <p>"Using the study planner keeps me on track. My grades have improved as a result." - James, 19</p>
+            <div class="testimonialsContainer">
+                <div class="slideshowContainer">
+                    <div class="mySlides fade">
+                        <p>"The study planner really helps me to schedule my studies around the rest of my life."
+                        </p>
+                        <img class="person-image" src="./assets/young-man.jpg">
+                        <p>- Alex, 20</p>
+                    </div>
+                    <div class="mySlides fade">
+                        <p>"Being able to view the progress for each of my milestones has really motivated me to study
+                            more!"</p>
+                        <img class="person-image" src="./assets/young-woman.jpg">
+                        <p> - Emma, 19</p>
+                    </div>
+                    <div class="mySlides fade">
+                        <p>"Using the study planner keeps me on track. My grades have improved as a result."</p>
+                        <img class="person-image" src="./assets/young-man-2.jpg">
+                        <p> - James, 21</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
 </body>
 
 </html>
