@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Quicksand", sans-serif;
+    font-family: 'Nunito', sans-serif;
   }
   
   html {
@@ -12,24 +12,29 @@
   .container {
     width: 100%;
     height: 100vh;
-    background-color: #6B6565;
+    background-image: url('./assets/polygon-scatter-haikei.svg');
     color: #eee;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
+  }
+  calendar-container {
+    width: 50%;
+    height: 100%;
   }
   
   .calendar {
     width: 45rem;
     height: 52rem;
-    background-color: #222227;
+    background-color: #6B6565;
     box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
   }
   
   .month {
     width: 100%;
     height: 12rem;
-    background-color: #F5850F;
+    background-color: #00CC8E;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -105,5 +110,5 @@
   }
   
   .today {
-    background-color: #F5850F;
+    background-color: #00CC8E;
   }
