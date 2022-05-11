@@ -15,6 +15,7 @@ body {
 .contentContainer {
     display: flex;
     justify-content: space-evenly;
+    height: 97vh;
     width: 90%;
     background-color: #EEEEEE;
 }
@@ -105,14 +106,24 @@ form>input {
     margin-bottom: 1rem;
 }
 
+input[type=file]::file-selector-button {
+    font-family: 'Nunito', sans-serif;
+  }
+
 form>label {
     font-size: 1rem;
     font-family: 'Nunito', sans-serif;
     margin-bottom: 0.3rem;
 }
 
+select {
+    font-size: 1rem;
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 1.5rem;
+}
+
 .signUpBtn {
-    margin: 1rem 0rem;
+    margin: 0.5rem 0rem;
     font-size: 1rem;
     font-family: 'Jost', sans-serif;
     text-align: center;
