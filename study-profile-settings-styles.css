@@ -1,22 +1,27 @@
 html,
 body {
     margin: 0;
+    background-image: url('assets/polygon-scatter-haikei.svg');
 }
 
 .mainContainer {
     height: 100vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-image: url('assets/polygon-scatter-haikei.svg');
 }
 
 .heading {
     color: white;
     font-family: 'Jost', sans-serif;
     font-size: 2rem;
-    margin-top: -1rem;
+}
+.headings {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .formHeading {
@@ -52,13 +57,46 @@ form input {
 .formContentContainer {
     display: flex;
     flex-direction: column;
-    margin-top: 1rem;
+    margin-top: -8rem;
     justify-content: center;
     align-items: center;
     background-color: #EEEEEE;
     border-radius: 5%;
     height: 70%;
-    width: 40%;
+    width: 35%;
+}
+.moduleContentContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: -8rem;
+    margin-left: 1rem;
+    justify-content: center;
+    align-items: center;
+    background-color: #EEEEEE;
+    border-radius: 5%;
+    height: 70%;
+    width: 35%;
+}
+.module {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 5rem;
+    text-align: center;
+    margin-top: 1rem;
+    background-color: rgba(0, 204, 142, 1);
+    color: white;
+    transition: background-color .4s ease-in-out;
+}
+.moduleText {
+    font-family: 'Nunito', sans-serif;
+}
+a {
+    text-decoration: none;
+}
+a :hover {
+    background-color: rgba(0, 204, 142, 40%);
 }
 
 .saveChangesBtn {
