@@ -1,114 +1,447 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-image: url('./assets/polygon-scatter-haikei.svg');
+  color: #eee;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+calendar-container {
+  width: 50%;
+  height: 100%;
+}
+
+.calendar {
+  width: 45rem;
+  height: 52rem;
+  background-color: #6B6565;
+  box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
+}
+
+.month {
+  width: 100%;
+  height: 12rem;
+  background-color: #00CC8E;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  text-align: center;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.month i {
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.month h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+.month p {
+  font-size: 1.6rem;
+}
+
+.weekdays {
+  width: 100%;
+  height: 5rem;
+  padding: 0 0.4rem;
+  display: flex;
+  align-items: center;
+}
+
+.weekdays div {
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  width: calc(44.2rem / 7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.days {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.2rem;
+}
+
+.days div {
+  font-size: 1.4rem;
+  margin: 0.3rem;
+  width: calc(40.2rem / 7);
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+  transition: background-color 0.2s;
+}
+
+.days div:hover:not(.today) {
+  background-color: #262626;
+  border: 0.2rem solid #777;
+  cursor: pointer;
+}
+
+.prev-date,
+.next-date {
+  opacity: 0.5;
+}
+
+.today {
+  background-color: #00CC8E;
+}
+
+
+/* To Do CSS */
+
+
+
+a {
+  text-decoration: none;
+}
+
+*::selection {
+  background-color: #cbd0ff;
+}
+
+.d-none {
+  display: none !important;
+}
+
+body {
+  background-color: #cbd0ff;
+  position: relative;
+}
+
+/* styling for container starts here */
+
+.container {
+  background-color: #6B6565;
+}
+
+/* styling for header starts here */
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.header-img {
+  width: 5rem;
+}
+
+/* styling for tasks container starts here */
+
+.tasks-container {
+  background-color: #6B6565;
+  width: 130%;
+  margin: auto;
+  margin-top: 2rem;
+  height: 80vh;
+  border-radius: 0.8rem;
+  overflow-y: scroll;
+  position: relative;
+}
+
+.tasks-container-header {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 0.1rem solid #d2ceec;
+}
+
+.tasks-container-header-logo {
+  color: #00CC8E;
+  font-size: 1.2rem;
+}
+
+.tasks-container-header-heading {
+  margin-left: 0.5rem;
+  color: #020631;
+}
+
+/* styling for tasks table starts here */
+
+.table-container {
+  display: block;
+  width: 100%;
+  height: 80%;
+  position: relative;
+  overflow-y: scroll;
+}
+
+.tasks-table {
+  width: 100%;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+tr {
+  border-bottom: 0.1rem solid #d2ceec;
+}
+
+th,
+td {
+  padding: 0.5rem;
+  border: none;
+  text-align: left;
+}
+
+td {
+  padding: 1rem 0.5rem;
+}
+
+tr:hover {
+  background-color: #cbd0ff;
+}
+
+/* styling for priorities */
+
+.high,
+.medium,
+.low {
+  background-color: rgb(205, 78, 78);
+  color: #fff;
+  padding: 0.3rem 1.3rem;
+  border-radius: 0.3rem;
+  font-size: 0.8rem;
+}
+
+.low {
+  background-color: rgb(120, 190, 103);
+  padding: 0.3rem 1.5rem;
+}
+
+.medium {
+  padding: 0.3rem 0.7rem;
+  background-color: rgb(216, 182, 62);
+}
+
+/* styling for buttons */
+
+thead th:nth-child(4),
+tr td:nth-child(4) {
+  text-align: center;
+}
+
+.done-btn,
+.del-btn {
+  color: #020631;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.done-btn {
+  font-size: 1.3rem;
+}
+
+.del-btn {
+  margin-left: 0.5rem;
+}
+
+/* styling for tasks container footer starts here */
+
+.tasks-container-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem 0.5rem;
+  border-top: 0.1rem solid #d2ceec;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.add-new-task-btn,
+.cancel-new-task-btn,
+.done-new-task-btn {
+  background-color: #020631;
+  color: #cbd0ff;
+  padding: 0.6rem 2rem;
+  border-radius: 0.3rem;
+  display: inline;
+  cursor: pointer;
+}
+
+.add-new-task-btn:hover {
+  color: #fff;
+}
+
+/* styling for new task container starts here */
+
+.new-task-container {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.new-task-form {
+  background-color: #dde0ff;
+  width: 50%;
+  margin: auto;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  z-index: 100;
+}
+
+.new-task-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  min-height: 100vh;
+  z-index: 1;
+}
+
+.new-task-form-row {
+  margin-bottom: 1rem;
+}
+
+.new-task-form-row>input {
+  border: none;
+  outline: none;
+  background-color: #dde0ff;
+  margin: 1rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid #d2ceec;
+  cursor: pointer;
+}
+
+.task-description-input {
+  width: 100%;
+}
+
+.radio-input-row {
+  margin-top: 0.5rem;
+}
+
+.radio-input-row label {
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+.new-task-form-btns-row {
+  margin-top: 1rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.done-new-task-btn {
+  margin-left: 0.5rem;
+}
+
+/* styling for completed tasks */
+
+.completed>td {
+  text-decoration: line-through;
+  color: #cbd0ff;
+}
+
+.completed {
+  background-color: #020631;
+}
+
+.completed:hover {
+  background-color: #020631;
+}
+
+.completed .done-btn {
+  display: none;
+}
+
+.completed .del-btn {
+  color: #cbd0ff;
+}
+
+.done {
+  background-color: rgb(82, 195, 1);
+  color: #fff;
+  padding: 0.3rem 1.3rem;
+  border-radius: 0.3rem;
+  font-size: 01rem;
+  text-decoration: none;
+}
+
+.warning-msg {
+  color: rgb(232, 66, 41);
+}
+
+@media only screen and (max-width: 900px) {
+  .tasks-container {
+      width: 90%;
   }
-  
-  html {
-    font-size: 62.5%;
+
+  .high,
+  .medium,
+  .low {
+      padding: 0.3rem 1rem;
   }
-  
-  .container {
-    width: 100%;
-    height: 100vh;
-    background-image: url('./assets/polygon-scatter-haikei.svg');
-    color: #eee;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
+
+  tr {
+      display: flex;
+      flex-wrap: wrap;
   }
-  calendar-container {
-    width: 50%;
-    height: 100%;
+
+  tr th:nth-child(1),
+  tr td:nth-child(1) {
+      width: 8rem;
   }
-  
-  .calendar {
-    width: 45rem;
-    height: 52rem;
-    background-color: #6B6565;
-    box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
+
+  tr th:nth-child(2),
+  tr td:nth-child(2) {
+      width: 20rem;
   }
-  
-  .month {
-    width: 100%;
-    height: 12rem;
-    background-color: #00CC8E;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2rem;
-    text-align: center;
-    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+
+  tr th:nth-child(3),
+  tr td:nth-child(3) {
+      width: 10rem;
   }
-  
-  .month i {
-    font-size: 2.5rem;
-    cursor: pointer;
+
+  tr th:nth-child(4),
+  tr td:nth-child(4) {
+      width: 5rem;
   }
-  
-  .month h1 {
-    font-size: 3rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 780px) {
+  thead tr {
+      display: none;
   }
-  
-  .month p {
-    font-size: 1.6rem;
+  .new-task-form {
+      width: 90%;
   }
-  
-  .weekdays {
-    width: 100%;
-    height: 5rem;
-    padding: 0 0.4rem;
-    display: flex;
-    align-items: center;
-  }
-  
-  .weekdays div {
-    font-size: 1.5rem;
-    font-weight: 400;
-    letter-spacing: 0.1rem;
-    width: calc(44.2rem / 7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
-  }
-  
-  .days {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0.2rem;
-  }
-  
-  .days div {
-    font-size: 1.4rem;
-    margin: 0.3rem;
-    width: calc(40.2rem / 7);
-    height: 5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
-    transition: background-color 0.2s;
-  }
-  
-  .days div:hover:not(.today) {
-    background-color: #262626;
-    border: 0.2rem solid #777;
-    cursor: pointer;
-  }
-  
-  .prev-date,
-  .next-date {
-    opacity: 0.5;
-  }
-  
-  .today {
-    background-color: #00CC8E;
-  }
+}
