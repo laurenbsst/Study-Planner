@@ -111,3 +111,42 @@ a :hover {
     height: 2.5rem;
     margin-top: 1rem;
 }
+@media screen and (min-width: 2560px) {
+    .formContentContainer {
+        height: 70%;
+        margin-bottom: 5rem;
+        margin-right: 5rem;
+    }
+    .moduleContentContainer {
+        height: 70%;
+        margin-bottom: 5rem;
+    }
+    .module {
+        width: 25rem;
+        height: 10rem;
+        margin-bottom: 2rem;
+    }
+    .moduleText {
+        font-size: 2rem;
+    }
+    .heading {
+        font-size: 3rem;
+        margin-top: 5rem;
+    }
+    .formHeading {
+        font-size: 2rem;
+    }
+    form>input {
+        height: 2.5rem;
+        font-size: 1rem;
+    }
+    form {
+        width: 60%;
+    }
+    .saveChangesBtn {
+        width: 60%;
+        margin-top: 3rem;
+        font-size: 1.5rem;
+        height: 5rem;
+    }
+}

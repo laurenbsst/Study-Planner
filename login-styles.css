@@ -1,7 +1,11 @@
+html, body{
+    margin: 0;
+}
 .mainContainer {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url(./assets/polygon-scatter-haikei.svg);
     height: 100vh;
 }
 
@@ -25,7 +29,7 @@
 form {
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 60%;
 }
 
 form>input {
@@ -42,11 +46,14 @@ form>label {
 }
 
 .loginBtn {
+    display: flex;
     font-size: 1rem;
     font-family: 'Jost', sans-serif;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
     background-color: #00CC8E;
-    width: 40%;
+    width: 80%;
+    height: 10%;
 }
 
 .btnText {
@@ -62,7 +69,9 @@ a:visited {
     align-self: flex-end;
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
-    margin-bottom: 3rem;
+    font-size: 0.8rem;
+    margin-top: -0.5rem;
+    margin-bottom: 2rem;
 }
 
 .footerText {
@@ -70,77 +79,46 @@ a:visited {
     font-size: 1rem;
     margin-top: 3rem;
 }
-
-@media screen and (min-width: 320px) {
-
-    html,
-    body {
-        margin: 0;
-    }
-
-    a, a:visited {
-        text-decoration: none;
-    }
-
-    .mainContainer {
-        background-image: url(./assets/polygon-scatter-haikei.svg);
-    }
-
-    .loginContainer {
-        height: 80vh;
-    }
-
+.signUpText {
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.8rem;
+    text-decoration: underline;
+}
+@media screen and (min-width: 2560px) {
     .loginTitle {
-        font-size: 1.5rem;
-        margin-bottom: 1.5rem;
+        font-size: 2rem;
+        font-family: 'Jost', sans-serif;
+        margin-bottom: 3rem;
+        color:  rgb(92, 91, 91);
     }
-
-    form {
-        width: 80%;
-    }
-
-    form>input {
-        font-family: 'Nunito', sans-serif;
-        height: 2rem;
-        margin-bottom: 1rem;
-    }
-
-    form>label {
-        font-size: 1rem;
-        margin-bottom: 0.3rem;
-    }
-
     .loginBtn {
         display: flex;
-        font-size: 1rem;
+        font-size: 1.5rem;
         font-family: 'Jost', sans-serif;
         justify-content: center;
         align-items: center;
         background-color: #00CC8E;
-        width: 80%;
+        width: 60%;
         height: 10%;
-    }
-
-    .forgottenPText {
-        align-self: flex-end;
-        font-family: 'Nunito', sans-serif;
-        font-weight: bold;
-        font-size: 0.8rem;
-        margin-top: -0.5rem;
-        margin-bottom: 2rem;
-    }
-
-    .footerText {
-        font-family: 'Nunito', sans-serif;
-        font-size: 1rem;
         margin-top: 2rem;
     }
-
-    .signUpText {
-        font-family: 'Nunito', sans-serif;
-        font-weight: bold;
-        font-size: 0.8rem;
-        text-decoration: underline;
+    form {
+        margin-top: 2rem;
+        width: 60%;
     }
-
+    form>input {
+        height: 2.5rem;
+        font-size: 1rem;
+    }
+    .footerText {
+        font-size: 1.5rem;
+        margin-top: 4rem;
+    }
+    .signUpText {
+        font-size: 1.3rem;
+    }
+    .forgottenPText {
+        font-size: 1rem;
+        color:  rgb(92, 91, 91);
+    }
 }
