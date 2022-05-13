@@ -11,8 +11,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+
     <script type="text/javascript"></script>
     <script src="signUpScript.js"></script>
     <title>Study Planner - Sign up</title>
@@ -23,9 +28,9 @@
         <div class="contentContainer">
             <div class="signUpContainer">
                 <h2 class="signUpTitle">Sign up</h2>
-                <form>
+                <form method="post">
                     <label for="firstName">First name</label>
-                    <input type="text" id="firstName" name="firstName" placeholder="Joe" required>
+                    <input type="text" id="firstName" name="firstName" placeholder="Joe">
                     <label for="lastName">Last name</label>
                     <input type="text" id="lastName" name="lastName" placeholder="Bloggs" required>
                     <label for="email">Email address</label>
@@ -48,7 +53,7 @@
                 </div> -->
                 <div class="footer">
                     <p class="footerText">Already have a study profile?</p>
-                    <p class="signInText"><a href="login.html">Sign in</a></p>
+                    <p class="signInText"><a href="/login">Sign in</a></p>
                 </div>
             </div>
             <div class="testimonialsContainer">

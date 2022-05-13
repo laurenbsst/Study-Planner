@@ -1,4 +1,4 @@
-function submitInfo(){
+/*function submitInfo(){
     var data={}
         data.input = $('#firstName').val();
     post('/get_form', data);
@@ -20,3 +20,4 @@ function post(path, data){
         }
     });
 };
+*/
