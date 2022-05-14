@@ -50,8 +50,12 @@ app.get('/calendar', (req, res) => {
     res.sendFile(__dirname + '/static/calendar.html')
 })
 
-app.get('/account-settings', (req, res) => {
-    res.sendFile(__dirname + '/static/account-settings.html')
+app.get('/study-profile-settings', (req, res) => {
+    res.sendFile(__dirname + '/static/study-profile-settings.html')
+})
+
+app.get('/module-details', (req, res) => {
+    res.sendFile(__dirname + '/static/module-details.html')
 })
 
 //app.get('/', (req, res) => {res.sendFile(__dirname + '/index.html')})

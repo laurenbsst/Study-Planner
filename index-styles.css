@@ -36,7 +36,6 @@ body {
     justify-content: center;
     border-left: 1px solid #e2e2e2;
     background-color: #00CC8E;
-
 }
 
 * {
@@ -165,4 +164,58 @@ select {
 
 .signInText {
     font-family: 'Nunito', sans-serif;
+}
+@media screen and (min-width: 2560px) {
+    .contentContainer {
+        display: flex;
+        justify-content: space-evenly;
+        height: 70vh;
+        width: 90%;
+        background-color: #EEEEEE;
+    }
+    .signUpTitle {
+        margin-top: 0rem;
+        font-family: 'Jost', sans-serif;
+        font-size: 2.5rem;
+        color:  rgb(92, 91, 91);
+    }
+    form {
+        margin-top: 3rem;
+        width: 45%;
+    }
+    form>input {
+        height: 2.5rem;
+        font-size: 1rem;
+    }
+    .signUpBtn {
+        margin-top: 2rem;
+        width: 45%;
+        font-size: 1.5rem;
+    }
+    .footer {
+        margin-top: 2rem;
+    }
+    .footerText {
+        font-size: 1.5rem;
+    }
+    .signInText {
+        font-size: 1.4rem;
+    }
+    select {
+        height: 2rem;
+        margin-bottom: 3rem;
+    }
+    .mySlides {
+        display: none;
+        color: white;
+        font-family: 'Nunito', sans-serif;
+        font-size: 2rem;
+        width: 50rem;
+        text-align: center;
+    }
+    .person-image {
+        height: 15rem;
+        width: 15rem;
+    }
+
 }
