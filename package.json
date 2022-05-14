@@ -1,8 +1,8 @@
 {
-  "name": "study-planner",
+  "name": "study-planner-1",
   "version": "1.0.0",
   "description": "A study planner built for a coursework assignment as part of the Software Engineering module",
-  "main": "app.js",
+  "main": "calendar-script.js",
   "scripts": {
     "devStart": "nodemon app.js"
   },
@@ -10,6 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/laurenbsst/Study-Planner.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
