@@ -5,7 +5,7 @@ html, body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(./assets/polygon-scatter-haikei.svg);
+    background-image: url('/assets/polygon-scatter-haikei.svg');
     height: 100vh;
 }
 
