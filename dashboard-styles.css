@@ -1,0 +1,126 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+.mainContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('./assets/polygon-scatter-haikei.svg');
+}
+
+.dashboardContainer {
+    margin-left: 20vw;
+    margin-right: 5vw;
+    display: grid;
+    grid-template-columns: auto auto;
+   column-gap: 1vw;
+   row-gap: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #d4d4d4;
+    border-radius: 1%;
+    border-top-left-radius: 0%;
+    border-bottom-left-radius: 0%;
+    height: 90vh;
+    width: 90vw;
+}
+
+.grid-item {
+   
+    background-color: rgba(255, 255, 255, 0.8);
+padding-left: 5vw;
+padding-right: 5vw;
+   
+  
+    font-size: 30px;
+    text-align: center;
+    width: 25vw;
+    height: 42vh;
+    border-radius: 1%;
+   
+
+}
+
+.grid-title
+{
+    font-family: 'Nunito', sans-serif;
+    padding-top: 2.5vh;
+    padding-bottom: 2vh;
+    font-size: 0.7em;
+   font-weight:900;
+   margin-top: 2vh;
+}
+
+.grid-content
+{
+    font-family: 'Nunito', sans-serif;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    font-size: 0.7em;
+   margin-top: 2vh;
+   line-height: 200%;
+}
+
+.sidenav {
+    margin-left: 5vw;
+    height: 90vh;
+    width: 15vw; 
+    position: fixed; 
+    border-radius: 1%;
+    left: 0;
+    background-color: rgb(37, 37, 37); 
+    overflow-x: hidden; 
+   
+  }
+  
+  
+  .sidenav a {
+    padding-top: 25%;
+    padding-left: 15%;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  table {
+      width: 100%;
+    display: flex;
+    
+    justify-content: center;
+    border-spacing: 2vw 0;
+      font-size: 0.5em;
+      font-family: 'Nunito', sans-serif;
+      
+  }
+
+  td, th{
+  padding: 0.5vh;
+  width:25%;
+  padding-top: 1.5vh;
+  }
+
+  .meter { 
+      width:8vw;
+    height: 0.5vh; 
+    position: relative;
+    background: #555;
+    border-radius: 25px;
+    padding: 2px;
+
+  }
+
+  .meter > span {
+    display: block;
+    height: 100%;
+    background-color: rgb(74, 225, 114);
+    position: relative;
+    overflow: hidden;
+  }
+
+ 
