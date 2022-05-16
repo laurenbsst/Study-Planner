@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Calendar</title>
+    <link rel="stylesheet" href="../calendar-style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <!-- todo script -->
+    <script src="../js/todo.js" defer></script>
+    <script src="../js/todoSync.js" defer></script>
+    <!-- setup to use font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="calendar-container">
+            <div class="calendar">
+                <div class="month">
+                    <i class="fas fa-angle-left prev"></i>
+                    <div class="date">
+                        <h1></h1>
+                        <p></p>
+                    </div>
+                    <i class="fas fa-angle-right next"></i>
+                </div>
+                <div class="weekdays">
+                    <div>Sun</div>
+                    <div>Mon</div>
+                    <div>Tue</div>
+                    <div>Wed</div>
+                    <div>Thu</div>
+                    <div>Fri</div>
+                    <div>Sat</div>
+                </div>
+                <div class="days"></div>
+            </div>
+        </div>
+
+        <div class="to-do-list">
+            <div class="tasks-container">
+                <div class="tasks-container-header">
+                    <i class="fa-solid fa-list-check tasks-container-header-logo"></i>
+                    <h3 class="tasks-container-header-heading">Tasks List</h3>
+                </div>
+                <div class="table-container">
+                    <table class="tasks-table">
+                        <thead>
+                            <th>Due Date</th>
+                            <th>Tasks</th>
+                            <th>Priority</th>
+                            <th>Actions</th>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tasks-container-footer">
+                    <div class="add-new-task-btn">
+                        Add New Task
+                    </div>
+                </div>
+            </div>
+            <!-- tasks container ends here -->
+        </div>
+        <!-- container for page ends here -->
+        <!-- new task container starts here -->
+        <div class="new-task-container d-none">
+            <div class="new-task-overlay"></div>
+            <div class="new-task-form">
+                <div class="new-task-form-row">
+                    <h4 class="input-heading">
+                        Select due date
+                    </h4>
+                    <input type="date" name="taskDate" id="taskDate" class="due-date-input new-task-input">
+                </div>
+                <div class="new-task-form-row">
+                    <h4 class="input-heading">
+                        Enter task details
+                    </h4>
+                    <input type="text" name="taskDescription" id="taskDescription"
+                        class="task-description-input new-task-input" maxlength="80"
+                        placeholder="task description here...">
+                </div>
+                <div class="new-task-form-row">
+                    <h4 class="input-heading">
+                        Select Priority for task
+                    </h4>
+                    <div class="radio-input-row">
+                        <input type="radio" name="taskPriority" value="high" id="task-priority-input-1"
+                            class="task-priority-input new-task-input">
+                        <label for="task-priority-input-1">High Priority</label>
+                    </div>
+                    <div class="radio-input-row">
+                        <input type="radio" name="taskPriority" value="medium" id="task-priority-input-2"
+                            class="task-priority-input new-task-input">
+                        <label for="task-priority-input-2">Medium Priority</label>
+                    </div>
+                    <div class="radio-input-row">
+                        <input type="radio" name="taskPriority" value="low" id="task-priority-input-3"
+                            class="task-priority-input new-task-input">
+                        <label for="task-priority-input-3">Low Priority</label>
+                    </div>
+                </div>
+                <div class="new-task-form-btns-row">
+                    <div class="cancel-new-task-btn">
+                        Cancel
+                    </div>
+                    <div class="done-new-task-btn">
+                        Add
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- current date tasks container -->
+        <div class="current-date-tasks-container d-none">
+            <div class="current-date-tasks-overlay"></div>
+            <div class="current-date-tasks-parent">
+                <table class="current-date-tasks">
+                    <thead>
+                        <th>Due Date</th>
+                        <th>Tasks</th>
+                        <th>Priority</th>
+                        <th>Actions</th>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+<script src="../calendar-script.js"></script>
+
+</html>
